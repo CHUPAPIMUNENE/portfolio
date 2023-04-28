@@ -1,0 +1,332 @@
+$bgdark: black;
+$gold: #bdae82;
+$white: white;
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: $bgdark;
+}
+
+.hire-me {
+  background-image: url(../images/bg.png);
+  height: 910px;
+}
+
+.alexa {
+  font-size: 40px;
+  color: $white;
+}
+
+.alexa p {
+  font-size: 27px;
+  line-height: 60px;
+
+  @media screen and (max-width:400px){
+    font-size: 15px;
+  }
+}
+
+.alexa button {
+  padding: 22px 100px;
+  background-color: $gold;
+  font-size: 20px;
+
+  &:hover {
+    transition: 1s;
+    background:none;
+    color: $gold;
+    border:1px solid $gold;
+  }
+
+  @media screen and (max-width:400px){
+    padding:7px 50px;
+  }
+}
+
+.header {
+  @include flex;
+  color: $white;
+  padding: 10px;
+}
+
+.side a {
+  margin: 30px;
+  text-decoration: none;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
+}
+
+#gold-text {
+  color: $gold;
+}
+
+.header a {
+  color: $white;
+}
+
+.side {
+  margin-top: 40px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
+}
+
+.burger {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 400px) {
+    display: none;
+  }
+}
+
+.alexa {
+  margin-top: 300px;
+  font-size: 30px;
+  margin-left: 100px;
+}
+
+.heading {
+  color: $gold;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.heading hr {
+  background-color: $gold;
+  width: 500px;
+}
+
+.cards {
+  @include flex;
+  color: $white;
+  text-align: center;
+  margin-top: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media screen and (max-width:400px){
+    justify-content: center;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  img {
+    width: 62px;
+    height: 50px;
+  }
+ 
+  h3 {
+    color: $white;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.skills {
+  margin-top: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 20px 100px;
+  border: 2px solid $gold;
+  color: $gold;
+  text-align: center;
+  margin: 10px;
+
+  &:hover {
+    transition: 1s;
+    background-color: $gold;
+    color: $bgdark;
+  }
+}
+
+.Portfolio {
+  margin-top: 180px;
+}
+
+.pictures {
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-end;
+
+  @media screen and (max-width:768px){
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  @media screen and (max-width:400px){
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .picture img{
+    width:400px;
+  }
+  .picture{
+    margin-top:50px;
+  }
+}
+
+.video {
+  text-align: center;
+  margin-top: 300px;
+  .video iframe {
+    margin-top: 300px;
+  }
+}
+
+.prices {
+  @include flex;
+
+  .price {
+    border: 2px solid $gold;
+    color: white;
+    text-align: center;
+    width:400px;
+    height:430px;
+  }
+
+  @media screen and (max-width:768px){
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (max-width:400px){
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.price h4{
+  color: $gold;
+    }
+
+.price button{
+  background-color: $gold;
+  color: $bgdark;
+  padding: 20px 80px;
+
+  &:hover {
+    transition: 1s;
+    background-color: $bgdark;
+    border:1px solid $gold;
+    color: $gold;
+  }
+}
+.contact{
+  background-image: url(../images/contactme.jpg);
+}
+
+.formochka{
+  display:flex;
+  flex-direction:column;
+  align-items: flex-end;
+  margin:100px 50px 100px;
+  & input{
+    width:320px;
+    height:42px;
+    margin-top:20px;
+    background: none;
+    border:2px solid $gold;
+    color: white;
+  }
+  & textarea{
+    width:320px;
+    margin-top:30px;
+    background: none;
+    border:2px solid $gold;
+    color: white;
+  }
+  & button{
+    padding: 10px 50px;
+    margin:20px 130px;
+    background-color: $gold;
+    color: $bgdark;
+
+    &:hover {
+      transition: 1s;
+      background:none;
+      border:1px solid $gold;
+      color: $gold;
+    }
+  }
+  & h1{
+    color:$gold;
+    margin:0px 180px;
+  }
+
+  @media screen and (max-width:768px){
+    align-items:center;
+  }
+  @media screen and (max-width:400px){
+    align-items:center;
+  }
+}
+
+.footer{
+@include flex;
+flex-direction: row;
+color: $white;
+
+
+@media screen and (max-width:768px){
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width:400px){
+    flex-direction: column;
+    align-items: center;
+}
+
+.right{
+@include flex;
+
+& img{
+  width: 20px;
+  height:20px;
+}
+}
+}
+}
